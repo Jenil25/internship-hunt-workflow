@@ -7,16 +7,19 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_HOST=localhost
+      - N8N_HOST=${N8N_HOST}
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
       - NODE_ENV=production
-      - WEBHOOK_URL=http://localhost:5678/
+      - WEBHOOK_URL=${WEBHOOK_URL}
       - GENERIC_TIMEZONE=America/New_York
       - N8N_ENABLE_MULTIPART_FORM_DATA=true
       - N8N_ALLOW_FILE_ACCESS_TO_FILES=/files
       - N8N_RESTRICT_FILE_ACCESS_TO=/files
       - NODES_EXCLUDE="[]"
+      - AWS_S3_BUCKET=${AWS_S3_BUCKET}
+      - N8N_ENVIRONMENT_VARIABLES_ALLOW_LIST=AWS_S3_BUCKET
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
     volumes:
       - ./n8n_data:/home/node/.n8n
       - ./local_files:/files
@@ -27,9 +30,9 @@ services:
     container_name: postgres-local
     restart: always
     environment:
-      - POSTGRES_USER=applai_user
-      - POSTGRES_PASSWORD=applai_random
-      - POSTGRES_DB=applai_db
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:
