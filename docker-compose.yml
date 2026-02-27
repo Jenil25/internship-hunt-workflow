@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n-local
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      - GENERIC_TIMEZONE=America/New_York
+      - N8N_ENABLE_MULTIPART_FORM_DATA=true
+      - N8N_ALLOW_FILE_ACCESS_TO_FILES=/files
+      - N8N_RESTRICT_FILE_ACCESS_TO=/files
+      - NODES_EXCLUDE="[]"
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+      - ./local_files:/files
+    restart: unless-stopped
+  
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: postgres-local
+    restart: always
+    environment:
+      - POSTGRES_USER=applai_user
+      - POSTGRES_PASSWORD=applai_random
+      - POSTGRES_DB=applai_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  latex:
+    build: ./latex-service
+    container_name: latex-local
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./local_files:/files
+    restart: unless-stopped

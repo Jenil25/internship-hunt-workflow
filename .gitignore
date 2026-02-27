@@ -1,0 +1,25 @@
+# Dependencies & runtime data
+n8n_data/
+postgres_data/
+node_modules/
+
+# Environment secrets
+.env
+.env.local
+.env.production
+
+# Generated files & outputs
+local_files/output/
+local_files/*.pdf
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Resume factory (if present)
+resume_factory/
+
+# Docker volumes
+*.log

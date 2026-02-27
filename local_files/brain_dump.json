@@ -1,0 +1,234 @@
+{
+    "candidate_profile": {
+        "name": "Jenil Mahyavanshi",
+        "contact": {
+            "email": "jenilmahy25@gmail.com",
+            "phone": "+1 (617) 407-0959",
+            "location": "Boston, MA",
+            "linkedin": "https://www.linkedin.com/in/jenilmahyavanshi/",
+            "github": "https://github.com/Jenil25"
+        },
+        "education": [
+            {
+                "degree": "Master of Science in Computer Science",
+                "institution": "Northeastern University",
+                "start_date": "September 2025",
+                "grad_date": "Exp. May 2027",
+                "gpa": "3.83/4.0",
+                "relevant_coursework": [
+                    "Programming Design Paradigms",
+                    "Database Management Systems",
+                    "Algorithms",
+                    "Foundations of Artificial Intelligence"
+                ],
+                "key_takeaways": "Focusing on scalable systems and LLM integration."
+            },
+            {
+                "degree": "Bachelor of Technology in Computer Engineering",
+                "institution": "Dharmsinh Desai University",
+                "start_date": "July 2019",
+                "grad_date": "May 2023",
+                "gpa": "8.14/10.0"
+            }
+        ],
+        "skills_master_list": {
+            "languages": [
+                "Python",
+                "TypeScript/JavaScript",
+                "Java",
+                "SQL",
+                "C++",
+                "C#",
+                "Dart",
+                "NoSQL"
+            ],
+            "backend_frameworks": [
+                "Flask",
+                "Django",
+                "Spring Boot",
+                "Node.js",
+                "FastApi"
+            ],
+            "frontend_frameworks": [
+                "React",
+                "Next.js",
+                "Flutter"
+            ],
+            "ai_data": [
+                "RAG",
+                "LangChain",
+                "LlamaIndex",
+                "pgvector",
+                "Kafka",
+                "RabbitMQ",
+                "Celery",
+                "Openai API"
+            ],
+            "cloud_infra": [
+                "AWS (EC2, S3, Lambda, ECS, Bedrock, Fargate, KMS, RDS)",
+                "GCP",
+                "Docker",
+                "Terraform"
+            ]
+        }
+    },
+    "experience_modules": [
+        {
+            "id": "exp_jeavio_adapt_core",
+            "category": [
+                "Backend",
+                "AI",
+                "System Design"
+            ],
+            "company": "Jeavio India Pvt. Ltd.",
+            "role": "Software Engineer",
+            "dates": "Jun 2024 - Jul 2025",
+            "project_name": "Adapt (LLM Platform)",
+            "summary_sentence": "Engineered a scalable microservices architecture for an LLM-powered platform processing high-volume document ingestion.",
+            "bullet_points_pool": [
+                "Architected a microservices ecosystem (Core, Data Ingestion, RAG) using Python, Flask, and NextJS.",
+                "Implemented a secure S3 multipart upload pipeline with ClamAV scanning for malware detection.",
+                "Designed an asynchronous task queue using RabbitMQ and Celery to handle heavy file processing workloads.",
+                "Developed a retry-able ingestion pipeline that checkpoints failed stages (e.g., extraction, chunking) to prevent data loss."
+            ],
+            "tech_stack": [
+                "Python",
+                "Flask",
+                "RabbitMQ",
+                "Celery",
+                "AWS S3",
+                "Docker"
+            ],
+            "metrics": {
+                "integrity": "100% data processing reliability via checkpointing",
+                "scale": "Handles high-volume concurrent uploads"
+            }
+        },
+        {
+            "id": "exp_jeavio_adapt_rag",
+            "category": [
+                "AI",
+                "ML",
+                "RAG"
+            ],
+            "company": "Jeavio India Pvt. Ltd.",
+            "role": "Software Engineer",
+            "dates": "Jun 2024 - Jul 2025",
+            "project_name": "Adapt (RAG Pipeline)",
+            "summary_sentence": "Designed advanced RAG pipelines to improve retrieval accuracy for complex queries.",
+            "bullet_points_pool": [
+                "Engineered a Hybrid Search system combining Semantic Search (pgvector) and Keyword Search (tsvector).",
+                "Implemented K-Means Clustering (k=11) to auto-generate topics and sub-topics from document chunks.",
+                "Optimized retrieval using Reciprocal Rank Fusion (RRF) and Cohere’s Reranker to prioritize most relevant context.",
+                "Developed 'Query Transformation' logic to generate similar queries and broaden search coverage."
+            ],
+            "tech_stack": [
+                "RAG",
+                "pgvector",
+                "Cohere",
+                "K-Means",
+                "LangChain",
+                "LLMs"
+            ],
+            "metrics": {
+                "accuracy": "Superior retrieval accuracy via RRF and Hybrid Search"
+            }
+        },
+        {
+            "id": "exp_jeavio_vito",
+            "category": [
+                "Full Stack",
+                "AI"
+            ],
+            "company": "Jeavio India Pvt. Ltd.",
+            "role": "Associate Software Engineer",
+            "dates": "May 2023 - May 2024",
+            "project_name": "Vito & Medwriter",
+            "summary_sentence": "Deployed OpenAI's Whisper model to streamline medical transcription.",
+            "bullet_points_pool": [
+                "Deployed OpenAI's Whisper model on GCP to transcribe doctor-patient conversations securely.",
+                "Implemented critical memory-leak handling and model-crash recovery protocols to ensure production stability.",
+                "Built a semantic search system allowing users to search across video content using natural language.",
+                "Integrated Stripe for paywall management and implemented live streaming capabilities."
+            ],
+            "tech_stack": [
+                "GCP",
+                "Whisper",
+                "React",
+                "Python",
+                "Stripe"
+            ],
+            "metrics": {
+                "efficiency": "Reduced manual content review time by 60%"
+            }
+        },
+        {
+            "id": "exp_jeavio_intern",
+            "category": [
+                "Full Stack",
+                "Internal Tools"
+            ],
+            "company": "Jeavio India Pvt. Ltd.",
+            "role": "Software Engineer Intern",
+            "dates": "Dec 2022 - Apr 2023",
+            "project_name": "Internal Tools (Skillopedia, DocShare)",
+            "summary_sentence": "Developed full-stack internal tools for HR and document management.",
+            "bullet_points_pool": [
+                "Enhanced a Document Management System with granular role-based permissions and UUID-based encryption.",
+                "Built 'Skillopedia', a talent pool tracker using Java Spring Boot and React for HR resource allocation."
+            ],
+            "tech_stack": [
+                "Java Spring Boot",
+                "React",
+                "MongoDB",
+                "Django"
+            ],
+            "metrics": {}
+        },
+        {
+            "id": "hackathon_talent_pool",
+            "category": [
+                "Leadership",
+                "Innovation"
+            ],
+            "project_name": "Hackathon: AI Talent Pool",
+            "role": "Team Lead",
+            "dates": "2 Weeks",
+            "summary_sentence": "Led a team of 5 to build an LLM-powered talent assignment tool.",
+            "bullet_points_pool": [
+                "Led a team of 5 engineers, serving as the primary LLM subject matter expert.",
+                "Solved the challenge of matching engineers to projects by creating a semantic search interface over employee skills."
+            ],
+            "tech_stack": [
+                "LLMs",
+                "Team Leadership",
+                "Prototyping"
+            ],
+            "metrics": {
+                "team_size": "Led 5 members"
+            }
+        },
+        {
+            "id": "proj_enigma_engine",
+            "category": [
+                "Backend",
+                "Database"
+            ],
+            "project_name": "The Enigma Engine",
+            "role": "Personal Project",
+            "summary_sentence": "A modular RESTful API for high-integrity transaction processing.",
+            "bullet_points_pool": [
+                "Implemented Atomic Transactions in MySQL to ensure data integrity during concurrent booking operations.",
+                "Optimized SQL queries using complex joins to generate real-time analytical reports on revenue trends."
+            ],
+            "tech_stack": [
+                "Flask",
+                "MySQL",
+                "REST API"
+            ],
+            "metrics": {
+                "integrity": "100% Data Integrity achieved"
+            }
+        }
+    ]
+}
