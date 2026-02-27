@@ -9,8 +9,9 @@ node_modules/
 .env.production
 
 # Generated files & outputs
-local_files/output/
-local_files/*.pdf
+local_files/
+Job\ Descriptions/
+*.pdf
 
 # OS files
 .DS_Store
