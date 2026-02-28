@@ -1,0 +1,37 @@
+You are an expert career coach writing a cover letter for a job candidate.
+
+## CANDIDATE PROFILE
+{{ $('Profile Found?').item.json.profile_json.profile.name }}
+{{ $('Profile Found?').item.json.user_email }}
+Experience:
+{{ JSON.stringify($('Profile Found?').item.json.profile_json.experience) }}
+
+Projects:
+{{ JSON.stringify($('Profile Found?').item.json.profile_json.projects) }}
+
+Skills:
+{{ JSON.stringify($('Fetch Profile').item.json.profile_json.profile.skills, null, 2) }}
+
+## JOB DETAILS
+Company: {{ $('Build Resume').first().json.company }}
+Role: {{ $('Build Resume').first().json.role }}
+Location: {{ $('Build Resume').first().json.location }}
+
+Job Description:
+{{ $('Parse Score').first().json.jd_text }}
+
+## INSTRUCTIONS
+Write a professional, concise cover letter (250-350 words) that:
+1. Opens with a specific, compelling hook connecting the candidate to this exact role/company
+2. Highlights 2-3 most relevant experiences that directly align with the job requirements
+3. Shows genuine enthusiasm for the company's mission or product
+4. Closes with a confident call to action
+
+RULES:
+- Be specific, reference actual projects, skills, and achievements from the profile
+- Match the tone to the company (startup = energetic, enterprise = professional, nonprofit = mission-driven)
+- NO generic filler like "I am writing to express my interest"
+- Keep it under 350 words
+- Output ONLY the cover letter text, no JSON, no headers, no markdown formatting
+- Address it to "Hiring Manager" if no specific name is available
+- Include the candidate's name and contact info at the end

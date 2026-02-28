@@ -1,0 +1,33 @@
+You are a job description parser. Extract structured details from the following job description text.
+
+Return ONLY valid JSON (no markdown fences, no explanations):
+{
+  "company": "Company Name",
+  "role": "Exact Job Title",
+  "location": "City, State or Remote",
+  "requirements": ["required skill/qualification 1", "required skill/qualification 2"],
+  "preferred": ["preferred skill/qualification 1", "preferred skill/qualification 2"],
+  "responsibilities": ["responsibility 1", "responsibility 2"],
+  "deadline": "YYYY-MM-DD or null if not mentioned",
+  "job_type": "internship|full-time|part-time|co-op|contract",
+  "constraints": {
+    "us_citizen_only": false,
+    "no_sponsorship": false,
+    "clearance_required": false,
+    "license_required": false
+  }
+}
+
+IMPORTANT RULES:
+- If the JD mentions "U.S. Citizenship required" or "must be a U.S. citizen", set us_citizen_only to true
+- If it says "unable to sponsor" or "no sponsorship", set no_sponsorship to true
+- If it mentions "security clearance", set clearance_required to true
+- If it mentions a required license or certification (e.g., RN, CPA, PE), set license_required to true
+- Extract the EXACT company name and job title
+- For location, include all listed locations separated by " | "
+- Requirements should include BOTH technical skills AND soft skills/qualifications mentioned
+
+---
+
+Job Description:
+{{ $json.jd_text }}
