@@ -2,6 +2,10 @@
 
 An automated job application pipeline powered by **n8n**, **Gemini AI**, **PostgreSQL (pgvector)**, and a **LaTeX compilation service**. Accepts job descriptions (PDF or text), scores them against a candidate profile, generates tailored ATS-optimized resumes, and optionally creates cover letters.
 
+> [!NOTE]
+> The frontend of this application is at: https://github.com/Jenil25/internship-hunt
+
+
 ## Architecture Overview
 
 ```
